@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Kvartirka</string>
+    <string name="selected_city_moscow">По умолчанию выбран город Москва</string>
+    <string name="connect_to_server_failed">Ошибка соединения с сервером</string>
+    <string name="loading_posts_failed">Ошибка загрузки постов</string>
+</resources>

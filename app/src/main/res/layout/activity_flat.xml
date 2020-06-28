@@ -11,9 +11,49 @@
         android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/image_size"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTitleFlat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/textViewTitleFlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBuildingTypeFlat"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager2"
+        tools:text="@string/title"
+        android:textSize="@dimen/title_size"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="@dimen/margin_10dp"/>
+
+    <TextView
+        android:id="@+id/textViewBuildingTypeFlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAddressFlat"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleFlat"
+        tools:text="@string/building_type"
+        android:layout_marginTop="@dimen/margin_10dp"/>
+
+    <TextView
+        android:id="@+id/textViewAddressFlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPriceFlat"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBuildingTypeFlat"
+        tools:text="@string/address"
+        android:layout_marginTop="@dimen/margin_10dp"/>
+
+    <TextView
+        android:id="@+id/textViewPriceFlat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddressFlat"
+        tools:text="@string/price"
+        android:layout_marginTop="@dimen/margin_10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,8 +5,10 @@
         свайпните вниз для повторной загрузки</string>
     <string name="loading_posts_failed">Ошибка загрузки постов,
         свайпните вниз для повторной загрузки</string>
-    <string name="price">Цена</string>
-    <string name="address">Адрес</string>
+    <string name="price">Цена:</string>
+    <string name="address">Адрес:</string>
     <string name="load_more">Загрузить еще</string>
     <string name="currency">руб.</string>
+    <string name="title">Title</string>
+    <string name="building_type">Тип здания:</string>
 </resources>

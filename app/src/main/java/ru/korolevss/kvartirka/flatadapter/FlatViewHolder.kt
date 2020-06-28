@@ -13,8 +13,6 @@ import ru.korolevss.kvartirka.model.Flat
 
 class FlatViewHolder(private val view: View, var list: MutableList<Flat>) : RecyclerView.ViewHolder(view) {
 
-    private lateinit var listOfPhoto: MutableList<String>
-
     companion object {
         const val ADDRESS = "ADDRESS"
         const val BUILDING_TYPE = "BUILDING_TYPE"
@@ -35,8 +33,9 @@ class FlatViewHolder(private val view: View, var list: MutableList<Flat>) : Recy
                     val intent = Intent(context, FlatActivity::class.java)
                     intent.putExtra(ADDRESS, flat.address)
                     intent.putExtra(BUILDING_TYPE, flat.building_type)
-                    intent.putExtra(PRICE, flat.prices.day)
+                    intent.putExtra(PRICE, flat.prices.day.toString())
                     intent.putExtra(TITLE, flat.title)
+                    val listOfPhoto = mutableListOf<String>()
                     flat.photos.forEach { it1 ->
                         listOfPhoto.add(it1.url)
                     }
@@ -52,7 +51,7 @@ class FlatViewHolder(private val view: View, var list: MutableList<Flat>) : Recy
         with(view) {
             textViewAddressMain.text = flat.address
             textViewPriceMain.text =
-                flat.prices.day.toString() + context.getString(R.string.currency)
+                """${flat.prices.day} ${context.getString(R.string.currency)}"""
 
             Glide.with(this)
                 .load(flat.photo_default.url)

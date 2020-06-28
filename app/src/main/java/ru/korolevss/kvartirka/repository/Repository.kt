@@ -17,7 +17,8 @@ object Repository {
 
     private var api: API = retrofit.create(API::class.java)
 
-    suspend fun getPosts(longitude: Double, latitude: Double) = api.getPosts(longitude,latitude)
+    suspend fun getPosts(longitude: Double, latitude: Double, offset: Int) =
+        api.getPosts(longitude, latitude, offset)
 
 
 }

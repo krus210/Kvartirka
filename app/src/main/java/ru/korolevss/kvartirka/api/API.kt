@@ -7,10 +7,11 @@ import ru.korolevss.kvartirka.model.Model
 
 interface API {
 
-    @GET("client/1.4/flats/?offset=0&device_screen_width=1920&currency_id=643")
+    @GET("client/1.4/flats/?device_screen_width=1920&currency_id=643")
     suspend fun getPosts(
         @Query("point_lng") longitude: Double,
-        @Query("point_lat") latitude: Double
+        @Query("point_lat") latitude: Double,
+        @Query("offset") offset: Int
     ): Response<Model>
 
 }
